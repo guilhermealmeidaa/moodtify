@@ -1,21 +1,21 @@
 
 🎧 Moodtify
 
-Moodtify é um gerador de playlists personalizadas com inteligência artificial, integrado à API do Spotify. A partir de uma simples descrição de humor, o app cria automaticamente uma seleção musical feita sob medida para o momento e adiciona diretamente na conta do usuário.
+Moodtify is an AI-powered playlist generator integrated with the Spotify API. From a simple mood description, the app automatically creates a personalized playlist and adds it directly to the user's account.
 
 ---
 
-🚀 Funcionalidades
+🚀 Features
 
-- 🧠 Geração de playlists com base em descrições como “chuvoso e introspectivo” ou “energia pra treino”
-- 🎧 Integração com o Spotify via OAuth 2.0
-- 🤖 Uso da OpenAI (GPT-3.5) para interpretar o mood e sugerir estilos musicais
-- 📜 Histórico local das playlists criadas (em breve: salvamento em banco)
-- 🎨 UI responsiva e moderna com Tailwind CSS + shadcn/ui
+- 🧠 Generates playlists based on mood descriptions like “rainy and introspective” or “high energy for workout”
+- 🎧 Integration with Spotify via OAuth 2.0
+- 🤖 Uses OpenAI (GPT-3.5) to interpret moods and suggest music styles
+- 📜 Local history of created playlists (database storage coming soon)
+- 🎨 Responsive, modern UI built with Tailwind CSS + shadcn/ui
 
 ---
 
-🛠️ Tecnologias Utilizadas
+🛠️ Technologies Used
 
 - Next.js (App Router)
 - Spotify Web API
@@ -23,27 +23,16 @@ Moodtify é um gerador de playlists personalizadas com inteligência artificial,
 - OpenAI API
 - Tailwind CSS + shadcn/ui
 - Zustand
-- Vercel para deploy
+- Vercel for deployment
 
 ---
 
-🧪 Como rodar localmente
+📄 License
 
-git clone https://github.com/guilhermealmeidaa/moodtify.git
-cd moodtify
-npm install
-
-# Crie um .env.local com as chaves de API do Spotify e OpenAI
-npm run dev
+This project is licensed under the MIT License.
 
 ---
 
-📄 Licença
+✨ Inspiration
 
-Este projeto está licenciado sob a MIT License.
-
----
-
-✨ Inspiração
-
-Moodtify nasceu da ideia de unir música, contexto emocional e tecnologia — transformando qualquer sentimento em som. 🎶
+Moodtify was born from the idea of blending music, emotional context, and technology — turning any feeling into sound. 🎶
