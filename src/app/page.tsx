@@ -34,7 +34,6 @@ export default function Home() {
               Sign in with Spotify
             </Button>
           </div>
-
           <MoodTicker />
         </div>
       </div>

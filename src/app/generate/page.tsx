@@ -37,13 +37,21 @@ export default function GeneratePage() {
     }
 
     const prompt = `
-      Crie uma playlist baseada nos sentimentos: ${cleanedMoods.join(", ")}.
-      Artistas favoritos do usuário: ${artists.join(", ")}.
-      Retorne:
-      - Um nome de playlist
-      - Uma descrição de até 25 palavras
-      - Uma lista com 20 músicas no formato: "Nome da música - Nome do artista"
-    `;
+        Crie uma playlist personalizada com base nos seguintes sentimentos: ${cleanedMoods.join(
+          ", "
+        )}.
+        Use os artistas favoritos do usuário apenas como referência de estilo e gosto musical: ${artists.join(
+          ", "
+        )}.
+        Você não precisa incluir músicas desses artistas especificamente — use-os para entender o gênero e a vibe que a pessoa curte.
+
+        Retorne:
+        1. Um nome curto para a playlist
+        2. Uma descrição com no máximo 25 palavras
+        3. Uma lista com 20 músicas no formato EXATO: "Nome da música - Nome do artista".
+        Use apenas nomes de músicas e artistas reais e populares que estejam disponíveis no Spotify.
+        Evite versões ao vivo, covers ou nomes genéricos. Evite traduzir nomes de músicas.
+`;
 
     const aiResponse = await fetch("/api/generate-playlist", {
       method: "POST",
@@ -93,7 +101,7 @@ export default function GeneratePage() {
         </>
       )}
 
-      {loadingStep && (
+      {loadingStep && response && (
         <div className="mt-8 max-w-xl text-center">
           <Button disabled>🎧 Criando Playlist...</Button>
         </div>
