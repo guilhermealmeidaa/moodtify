@@ -48,7 +48,12 @@ export default function GeneratePage() {
         Retorne:
         1. Um nome curto para a playlist
         2. Uma descrição com no máximo 25 palavras
-        3. Uma lista com 20 músicas no formato EXATO: "Nome da música - Nome do artista".
+        3. Uma lista com 20 músicas no formato "Nome da música - Nome do artista".
+
+        Não enumere a lista de músicas, apenas escreva os nomes.
+  
+        Não use aspas ou colchetes.
+        
         Use apenas nomes de músicas e artistas reais e populares que estejam disponíveis no Spotify.
         Evite versões ao vivo, covers ou nomes genéricos. Evite traduzir nomes de músicas.
 `;
@@ -62,7 +67,7 @@ export default function GeneratePage() {
     setResponse(aiResponse.result);
     setLoadingStep("tracks");
     const aiData = parseAiResponse(aiResponse.result);
-
+    console.log("AI Data", aiData);
     const result = await generateSpotifyPlaylist({
       accessToken: session.accessToken,
       playlistName: aiData.playlistName,
