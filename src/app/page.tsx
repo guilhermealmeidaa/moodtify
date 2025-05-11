@@ -4,6 +4,7 @@ import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { MoodTicker } from "@/components/moodTicker";
 import { Button } from "@/components/ui/button";
+import { signIn } from "next-auth/react";
 import { FaSpotify } from "react-icons/fa";
 
 export default function Home() {
@@ -26,7 +27,9 @@ export default function Home() {
           </p>
 
           <div className="flex items-center justify-center mt-6">
-            <Button onClick={() => {}}>
+            <Button
+              onClick={() => signIn("spotify", { callbackUrl: "/generate" })}
+            >
               <FaSpotify size={20} className="mr-2" />
               Sign in with Spotify
             </Button>
