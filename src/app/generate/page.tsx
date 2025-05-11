@@ -93,7 +93,7 @@ export default function GeneratePage() {
         </>
       )}
 
-      {loadingStep && playlistUrl && (
+      {loadingStep && (
         <div className="mt-8 max-w-xl text-center">
           <Button disabled>🎧 Criando Playlist...</Button>
         </div>
