@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { MoodInputList } from "@/components/moodInputList";
 import { parseAiResponse } from "@/lib/utils";
 import { generateSpotifyPlaylist } from "@/lib/spotify-playlist";
-import { Skeleton } from "@/components/ui/skeleton";
 
 export default function GeneratePage() {
   const { data: session } = useSession();
@@ -94,12 +93,9 @@ export default function GeneratePage() {
         </>
       )}
 
-      {loadingStep && (
-        <div className="mt-8 max-w-xl w-full flex flex-col gap-3">
-          <Skeleton className="h-6 w-2/3 mx-auto" />
-          <Skeleton className="h-5 w-full" />
-          <Skeleton className="h-5 w-full" />
-          <Skeleton className="h-5 w-4/5" />
+      {loadingStep && playlistUrl && (
+        <div className="mt-8 max-w-xl text-center">
+          <Button disabled>🎧 Criando Playlist...</Button>
         </div>
       )}
 

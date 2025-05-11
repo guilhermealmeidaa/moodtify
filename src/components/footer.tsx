@@ -15,7 +15,7 @@ export const Footer = () => {
         {/* Redes sociais à direita */}
         <div className="flex gap-4">
           <a
-            href="https://twitter.com/seuusuario"
+            href="https://twitter.com/guimasiko"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-[#1E293B] transition-colors"
@@ -23,7 +23,7 @@ export const Footer = () => {
             <FaXTwitter size={18} />
           </a>
           <a
-            href="https://github.com/seuusuario"
+            href="https://github.com/guilhermealmeidaa"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-[#1E293B] transition-colors"
