@@ -1,5 +1,11 @@
 import Fuse from "fuse.js";
 
+type SpotifyTrack = {
+  uri: string;
+  name: string;
+  artists: { name: string }[];
+};
+
 /**
  * Tenta encontrar o URI de uma faixa usando fuzzy matching se a busca direta falhar
  */
@@ -23,7 +29,7 @@ export async function fuzzySearchTrack(
   const results = data?.tracks?.items;
   if (!results || results.length === 0) return null;
 
-  const fuse = new Fuse(results, {
+  const fuse = new Fuse<SpotifyTrack>(results, {
     keys: ["name", "artists.name"],
     threshold: 0.3,
     includeScore: true,
